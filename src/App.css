@@ -1,0 +1,139 @@
+/* App.css */
+
+/* Reset et polices */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --text-color: #2b2d42;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #adb5bd;
+  --white: #ffffff;
+  --error-color: #ef233c;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-gray);
+  padding: 20px;
+}
+
+/* Conteneur principal */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Tableau */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.data-table thead {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.data-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+.data-table tbody tr:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+/* Colonnes spécifiques */
+.data-table td:first-child {
+  font-weight: 500;
+  color: var(--secondary-color);
+  width: 80px;
+}
+
+.data-table td:nth-child(2) {
+  font-weight: 500;
+}
+
+.data-table td:nth-child(3) {
+  color: #495057;
+}
+
+/* États */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.loading {
+  color: var(--primary-color);
+  background-color: rgba(67, 97, 238, 0.1);
+}
+
+.error {
+  color: var(--error-color);
+  background-color: rgba(239, 35, 60, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
